@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { LinksComponent } from './links/links.component';
 import { PlanetsComponent } from './planets/planets.component';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { PlanetsComponent } from './planets/planets.component';
     HomeComponent,
     LinksComponent,
     PlanetsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NavbarComponent
+    NavbarComponent,
+    CarouselModule,
   ],
   providers: [
     provideClientHydration()

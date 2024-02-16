@@ -7,6 +7,10 @@
     </div>
   </div>
   <div class="flex justify-center items-center">
-
+    <p-carousel [value]="oi" [numVisible]="1" (onPage)="teste($event)" >
+      <ng-template pTemplate="item">
+        <img src={{oi[0]}} />
+      </ng-template>
+    </p-carousel>
   </div>
 </div>

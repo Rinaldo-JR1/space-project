@@ -1,15 +1,15 @@
 <div class="grid grid-cols-1 md:grid-cols-2 mt-8 text-white h-[120%]">
   <div class="flex justify-center items-center p-10">
     <div>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ab vel ipsam facilis dolores aspernatur omnis,
-      odit, eum, perferendis voluptatibus architecto libero perspiciatis. Nam nisi doloribus aut facilis, voluptatem
-      perspiciatis?
+    {{text}}
     </div>
   </div>
   <div class="flex justify-center items-center">
-    <p-carousel [value]="oi" [numVisible]="1" (onPage)="teste($event)" >
-      <ng-template pTemplate="item">
-        <img src={{oi[0]}} />
+    <p-carousel [value]="planets" [numVisible]="1" (onPage)="handlePages($event)">
+      <ng-template pTemplate="item" let-planet >
+        <div class="flex justify-center align-middle">
+          <img src={{planet.image}} class="w-96 flex" />
+        </div>
       </ng-template>
     </p-carousel>
   </div>
